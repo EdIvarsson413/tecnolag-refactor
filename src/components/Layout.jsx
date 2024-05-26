@@ -14,13 +14,13 @@ const Layout = () => {
                             <img 
                                 src="/imgs/tecnolag_largo.png" 
                                 alt="Logo Tecnolag" 
-                                className="md:w-[35%] lg:w-[25%] mt-1"
+                                className="lg:w-[35%] xl:w-[25%] mt-1"
                             />
                         </Link>
                     </div>
                     <div className="flex gap-12 text-lg">
                         <Link 
-                            className={`${location.pathname === '/sobre-nosotros'? 'font-bold': 'font-normal' } w-36`}
+                            className={`${location.pathname === '/sobre-nosotros'? 'font-bold': 'font-normal' } w-40 text-center`}
                             to='/sobre-nosotros'
                         >
                             Sobre Nosotros
