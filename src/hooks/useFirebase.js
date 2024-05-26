@@ -1,7 +1,12 @@
-import { collection, getDocs, query } from "firebase/firestore/lite";
+import { collection, doc, getDocs, query, setDoc } from "firebase/firestore/lite"
 import { db } from "../lib/firebase"
+import { nanoid } from "nanoid"
+import { useState } from "react"
 
 const useFirebase = () => {
+    const [ loading, setLoading ] = useState(false);
+    const [ mensaje, setMensaje ] = useState('');
+
     const getData = async () => {
         try {
             //Prev permite traer informacion previa del state, en este caso atributo de un objeto 
@@ -27,8 +32,39 @@ const useFirebase = () => {
         }
     }
 
+    const enviarFormulario = async ( form ) => {
+        setLoading(true);
+
+        try {
+            const nuevoDoc = {
+                uuid: nanoid(),
+                nombre: form.nombre,
+                numero: form.numero === ''? 'Sin Número' : form.numero,
+                correo: form.correo,
+                asunto: form.asunto,
+                mensaje: form.mensaje,
+                atentido: false
+            }
+
+            // Crear documento en firebase
+            const docRef = doc( db, 'buzon', nanoid());
+            await setDoc( docRef, nuevoDoc );
+
+            // Enviar mensaje de exito
+            setMensaje( 'Formulario enviado, espere hasta que lo atendamos' );
+        } catch (error) {
+            console.log(error)
+            setMensaje( 'Hubo un problema, intente más tarde' );
+        } finally {
+            setLoading( false );
+            alert( mensaje )
+        }
+    }
+
     return {
-        getData
+        getData,
+        enviarFormulario,
+        loading
     }
 }
 
