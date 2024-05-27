@@ -1,7 +1,7 @@
 .image-container {
     position: relative;
     display: inline-block;
-    text-align: center;
+    text-align: left;
 }
 
 .overlay {
@@ -15,21 +15,23 @@
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
+    width: calc(150vw - 100px); 
+    height: 550px; 
+    max-width: 100%;
+    object-fit: fill; 
     opacity: 1;
 }
 
 .text-overlay {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 35%;
+    transform: translate(-50%);
     color: rgb(255, 255, 255);
-    font-size: 24px;
+    font-size: 35px;
     padding: 20px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -39,7 +41,6 @@
     margin: 20px auto;
     background-color: white;
     box-shadow: 15px 25px 35px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     display: flex;
     align-items: center;
 }
@@ -57,10 +58,10 @@
 
 .rectangle-container h2 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
 }
 
 .rectangle-container p {
-    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))); 
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))); /* Tamaño de fuente ajustable */
     line-height: 1.5; 
 }
