@@ -61,6 +61,6 @@
 }
 
 .rectangle-container p {
-    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))); /* Tamaño de fuente ajustable */
-    line-height: 1.5; /* Espacio entre líneas */
+    font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1920 - 320))); 
+    line-height: 1.5; 
 }
