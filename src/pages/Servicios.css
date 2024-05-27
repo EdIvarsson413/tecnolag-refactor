@@ -27,10 +27,9 @@
     transform: translate(-50%, -50%);
     color: rgb(255, 255, 255);
     font-size: 24px;
-    padding: 20px; /* Aumentado el espacio alrededor del texto */
+    padding: 20px;
     border-radius: 10px;
-    text-align: center; /* Alinea el texto al centro horizontalmente */
-    /* Puedes agregar más estilos al texto según tus preferencias */
+    text-align: center;
 }
 
 
@@ -39,7 +38,7 @@
     max-width: 600vh;
     margin: 20px auto;
     background-color: white;
-    box-shadow: 15px 25px 35px rgba(0, 0, 0, 0.1); /* Efecto de sombra en el lado derecho e inferior */
+    box-shadow: 15px 25px 35px rgba(0, 0, 0, 0.1);
     padding: 20px;
     display: flex;
     align-items: center;
@@ -58,7 +57,7 @@
 
 .rectangle-container h2 {
     font-size: 24px;
-    margin-bottom: 10px; /* Espacio entre el encabezado y el párrafo */
+    margin-bottom: 10px;
 }
 
 .rectangle-container p {
