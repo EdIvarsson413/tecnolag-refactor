@@ -19,6 +19,7 @@ const Index = () => {
 
       <h1 className='txt_industrias'>Industrias</h1>
     
+    <a href="/servicios">
       <div class='cuerpo'>
         <div class="collage">
         <div class="item item_img_1"><span className= "item_txt">Automotriz</span></div>
@@ -27,8 +28,10 @@ const Index = () => {
         <div class="item item_img_4"><span className= "item_txt">Telecomunicaciones</span>
         </div>
         </div>
+        
 
     </div>
+    </a>
     </div>
     
     )
