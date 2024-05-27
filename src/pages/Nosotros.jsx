@@ -1,61 +1,119 @@
-import React from 'react';
-import edi1 from '../assets/edificios.jpg';
-import edi2 from '../assets/edificios2.jpg';
-import orga from '../assets/orga.jpg';
-import '../Nosotros.css';
-
-const Nosotros = () => {
-  return (
-    <div>
-      <div className="contenedorbase">
-        <div className="contenedor">
-          <div className="capa-oscura"></div>
-          <img src={edi1} className="imagen-edificio" alt="Edificio" />
-          <div className="texto-superpuesto">
-            Nuestra misión es crear soluciones de
-            software innovadoras, de alta calidad
-            que transformen las experiencias
-            digitales de nuestros clientes
-          </div>
-        </div>
-
-        <div className="espacio-en-blanco"></div> 
-
-        <div className="contenedor2">
-          <img src={edi2} className="imagen-edificio2" alt="Edificio" />
-          
-          <div className="texto">
-          <div className="espacio-en-blanco2"></div> 
-          ¿Quiénes somos?
-        </div>
-        <div className="texto2">
-        <div className="espacio-en-blanco2"></div> 
-        Somos una empresa dedicada a
-ofrecer soluciones tecnológicas
-innovadoras, especializada en
-consultoría y desarrollo de
-software, infraestructura
-tecnológica y análisis de datos
-con inteligencia artificial. Nuestro
-compromiso es transformar las
-ideas en realidades digitales que
-impulsen el éxito de nuestros
-clientes.
-        </div>
-        </div>
-        <div className="espacio-en-blanco"></div> 
-
-        <div className="texto-tama">
-          Conoce a nuestro equipo
-        </div>
-        <div className="imagen3">
-          <img src={orga} className="imagen-edificio3 imagen-edificio3-rotada" alt="Organización" />
-        </div>
-
-       
-      </div>
-    </div>
-  );
+.contenedorbase {
+  position: relative;
+  text-align: center; 
+  color: rgb(0, 0, 0); 
+  background-color: #f5f5f5;
 }
 
-export default Nosotros;
+.texto {
+  display: block;
+  font-size: 250%;
+  font-weight: bold;
+  width: 50%; 
+  height: auto;
+    float: left; 
+}
+
+.texto2 {
+  display: block;
+  width: 45%; 
+  font-size: 170%;
+  height: 170%; 
+  float: right; 
+  margin-top: 20px;    
+    margin-right: 30px;  
+  margin-bottom: 20px; 
+  margin-left: 10px;  
+}
+
+.contenedor {
+    position: relative;
+    text-align: center; 
+    background-color: #f5f5f5;
+    
+  }
+  .espacio-en-blanco {
+    height: 30px;
+  }
+
+  .espacio-en-blanco2 {
+    height: 10px; 
+  }
+  .contenedor2 {
+    position: relative;
+    background-color: #ffffff;
+    text-align: center;
+    width: 75%;
+    height: 500px; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3); 
+  }
+
+  .contenedor3 {
+    position: relative;
+    background-color: #ffffff;
+    text-align: center;
+    width: 75%;
+    height: 800px; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden; 
+    box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .imagen-edificio2 {
+    display: block;
+    width: 50%; 
+    height: 100%; 
+    float: right; 
+  }
+  
+  .imagen-edificio3 {
+    display: block;
+    width: 100%; 
+    height: 100%; 
+    float: right; 
+  }
+  
+ 
+
+  .imagen-edificio {
+    display: block;
+    width: 100%; 
+    height: 90vh;
+    }
+
+  
+  
+      
+    .texto-superpuesto {
+      position: absolute;
+      top: 60%; 
+      right: 0; 
+      transform: translateY(-50%); 
+      color: white; 
+      font-size: 300%; 
+      text-align: right; 
+      padding: 100px; 
+    }
+  .capa-oscura {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0); 
+    opacity: 0.6; 
+  }
+  
+  .texto-tama {
+    color: rgb(0, 0, 0);
+    font-size: 250%;
+    font-weight: bold;
+    text-align: left; 
+    text-indent: 150px; 
+  }
