@@ -48,12 +48,13 @@ clientes.
         <div className="texto-tama">
           Conoce a nuestro equipo
         </div>
-        <div className="imagen3">
+        <div className="contenedor3">
           <img src={orga} className="imagen-edificio3 imagen-edificio3-rotada" alt="Organización" />
         </div>
 
-       
+        <div className="espacio-en-blanco"></div>   
       </div>
+     
     </div>
   );
 }
